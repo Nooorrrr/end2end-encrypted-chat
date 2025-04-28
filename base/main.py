@@ -36,5 +36,5 @@ def receiving_messages(c):
         print("Partner: " + message)
 
 
-threading.Thread(target=sending_messages, args=(client,))
-threading.Thread(target=receiving_messages, args=(client,))
+threading.Thread(target=sending_messages, args=(client,)).start()
+threading.Thread(target=receiving_messages, args=(client,)).start()
